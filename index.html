@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Web Fundamentals Workshop</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>Home</span></a>
+						<a href="#work_tpemetro" class="icon solid fa-chart-line"><span>折線圖</span></a>
+						<a href="#work_ecar" class="icon solid fa-chart-bar"><span>長條圖</span></a>
+						<a href="#work_electricity" class="icon solid fa-chart-pie"><span>圓餅圖</span></a>
+						<!-- <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a> -->
+						<!-- <a href="https://twitter.com/ajlkn" class="icon brands fa-twitter"><span>Twitter</span></a> -->
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<header>
+									<h1>李昱澤</h1>
+									<p>110502523</p>
+								</header>
+								<a href="#work_tpemetro" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
+
+						<!-- Work -->
+							<article id="work_tpemetro" class="panel">
+								<header class="title">
+									<div>
+										<img src="https://upload.wikimedia.org/wikipedia/zh/d/d1/Taipei_Metro_Logo.svg" alt="">
+										<h3>台北捷運全系統旅運量（2021年8月 vs. 2023年8月）</h3>
+									</div>
+									<p>資料來源：<a href="https://data.gov.tw" target="_blank">政府資料開放平臺</a></p>
+								</header>
+								<div id="TPEMetroGraph"></div>
+								<div class="chart_description">
+									<p><b>製作方法：</b></p>
+									<p>將政府資料開放平臺上的資料統整後製成折線圖</p>
+									<p>資料取自<a href="https://data.gov.tw/dataset/128641" target="_blank">此處</a></p>
+								</div>
+								<div class="chart_description">
+									<p><b>洞悉</b></p>
+									<p>1. 疫情導致旅運量幾乎減半</p>
+									<p>2. 假日的旅運量比平日少</p>
+									<p>3. 颱風比 covid 的影響還大</p>
+								</div>
+							</article>
+
+							<article id="work_ecar" class="panel">
+								<header class="title">
+									<div>
+										<img src="https://cdn-icons-png.flaticon.com/512/2175/2175411.png" alt="">
+										<h3>台灣電動車交車數量（2023年3月 ~ 2023年9月）</h3>
+									</div>
+									<p>資料來源：<a href="https://www.ddcar.com.tw" target="_blank">DDCAR 電動車</a></p>
+								</header>
+								<div id="eCarGraph"></div>
+								<div class="chart_description">
+									<p><b>製作方法：</b></p>
+									<p>從 DDCAR 網站上的多篇文章內容截取部分資訊製成此圖表</p>
+									<p>文章取自<a href="https://www.ddcar.com.tw/blogs/search/list?cx=ee4c42b2033f51633&q=台灣電動車銷售排行榜#gsc.tab=0&gsc.q=台灣電動車銷售排行榜&gsc.page=1" target="_blank">此處</a></p>
+								</div>
+								<div class="chart_description">
+									<p><b>洞悉</b></p>
+									<p>1. 特斯拉已經發展多年，產能及交車速度皆為第一</p>
+									<p>2. 其餘品牌尚在發展初期，產量較少，因此交車量與特斯拉相差甚遠</p>
+									<p>3. BMW 表現出色，排名第二，將來很有可能與特斯拉爭霸</p>
+								</div>
+							</article>
+
+							<article id="work_electricity" class="panel">
+								<header class="title">
+									<div>
+										<img src="https://cdn-icons-png.flaticon.com/512/740/740845.png" alt="">
+										<h3>台灣近四年發電量佔比（2019年 ~ 2022年）</h3>
+									</div>
+									<p>資料來源：<a href="https://www.esist.org.tw/Database/Search?PageId=3" target="_blank">經濟部能源署能源統計專區</a></p>
+								</header>
+								<div id="electricityGraph"></div>
+								<div class="chart_description">
+									<p><b>製作方法：</b></p>
+									<p>將能源統計專區上的表格截取部分資訊製成此圖表</p>
+									<p>搜尋條件的類別和能源別都是「全選」</p>
+								</div>
+								<div class="chart_description">
+									<p><b>洞悉</b></p>
+									<p>1. 火力發電依然是最主要的供電來源</p>
+									<p>2. 核能的佔比逐年降低，未來可能會消失</p>
+									<p>3. 再生能源佔比逐年上升，2022年已經超越核能</p>
+								</div>
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="https://cdn.plot.ly/plotly-2.26.0.min.js" charset="utf-8"></script>
+			<script src="assets/js/tpemetro_data.js"></script>
+			<script src="assets/js/tpemetro_layout.js"></script>
+			<script src="assets/js/ecar_data.js"></script>
+			<script src="assets/js/ecar_layout.js"></script>
+			<script src="assets/js/electricity_data.js"></script>
+			<script src="assets/js/electricity_layout.js"></script>
+			
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
